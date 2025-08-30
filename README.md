@@ -38,4 +38,4 @@ Agar GitHub Pages yoki Vercel orqali joylashtirsang, linkni shu yerga qo‘yish 
 
 Ism: Anvarbek Tilakov
 
-Telegram: https://TmAlonee_01
+Telegram: https://t.me/TmAlonee_01
