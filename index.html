@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Oddiy vazifa bajaruvchi sayt</title>
+  <!-- CSS faylni ulash -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Oddiy vazifa bajaruvchi sayt — Aniq va tez</h1>
+      <div style="font-size:13px;color:var(--muted)">Hozir: <span id="now"></span></div>
+    </header>
+
+    <div class="grid">
+      <!-- Chap: To-do va Kalkulyator -->
+      <div>
+        <section class="card" aria-labelledby="todo-title">
+          <h2 id="todo-title">To-do ro'yxat (Vazifalar)</h2>
+          <label for="newTask">Yangi vazifa qo'shish</label>
+          <div style="display:flex;gap:8px">
+            <input id="newTask" placeholder="Masalan: inshoni tugatish" />
+            <button id="addTask" class="btn small">Qo'shish</button>
+          </div>
+
+          <div class="todo-list" id="todoList" aria-live="polite"></div>
+
+          <div style="display:flex;gap:8px;margin-top:10px">
+            <button id="clearDone" class="btn small">Bajarilganlarni o'chirish</button>
+            <button id="clearAll" class="btn small">Hammasini o'chirish</button>
+          </div>
+        </section>
+
+        <section class="card" style="margin-top:12px" aria-labelledby="calc-title">
+          <h2 id="calc-title">Oddiy kalkulyator</h2>
+          <label for="expr">Ifodani kiriting (misol: 12+3*4/2)</label>
+          <div style="display:flex;gap:8px">
+            <input id="expr" placeholder="12+3*4" />
+            <button id="calcBtn" class="btn small">Hisobla</button>
+          </div>
+          <div style="margin-top:8px">Natija: <strong id="calcResult">—</strong></div>
+
+          <hr style="margin:10px 0;border:none;border-top:1px dashed rgba(255,255,255,0.03)" />
+          <div>
+            <label>Tez amallar</label>
+            <div class="calc-row">
+              <button class="small" data-val="+">+</button>
+              <button class="small" data-val="-">-</button>
+              <button class="small" data-val="*">*</button>
+              <button class="small" data-val="/">/</button>
+              <button class="small" id="clearExpr">Tozalash</button>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- O'ng: Vaqt va eslatma -->
+      <aside>
+        <section class="card timer" aria-labelledby="timer-title">
+          <h2 id="timer-title">Oddiy taymer</h2>
+          <div style="font-size:32px;font-weight:600" id="timeDisplay">00:00</div>
+          <div style="display:flex;gap:8px;width:100%">
+            <input id="minutes" type="number" min="0" placeholder="Minut" />
+            <button id="startTimer" class="btn small">Start</button>
+          </div>
+          <div style="display:flex;gap:8px;margin-top:8px">
+            <button id="pauseTimer" class="small">Pause</button>
+            <button id="resetTimer" class="small">Reset</button>
+          </div>
+        </section>
+
+        <section class="card" style="margin-top:12px" aria-labelledby="notes-title">
+          <h2 id="notes-title">Qisqa eslatma</h2>
+          <label for="noteText">Yozuv</label>
+          <textarea id="noteText" rows="5" placeholder="Bu yerga qisqa eslatma yozing..."></textarea>
+          <div style="display:flex;gap:8px;margin-top:8px">
+            <button id="saveNote" class="btn small">Saqlash</button>
+            <button id="loadNote" class="small">Yuklash</button>
+          </div>
+        </section>
+      </aside>
+    </div>
+
+    <footer>
+      Bu namuna sayt: HTML, CSS va JavaScript bilan oddiy vazifalarni bajaradi.
+    </footer>
+  </div>
+
+  <!-- JavaScript kodlari -->
+  <script src="script.js"></script>
+</body>
+</html>
